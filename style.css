@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212; 
+  color: #fff; 
+  overflow-x: hidden; 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative; 
+}
+
+.music-box {
+  width: 100%; 
+  max-width: 600px;
+  background-color: #1e1e1e;
+  border: 3px solid #00bfff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  position: relative; 
+  z-index: 10; 
+}
+
+.title {
+  font-size: 2em; 
+  color: #ffffff; 
+  margin-bottom: 10px;
+  text-transform: lowercase; 
+}
+
+.separator {
+  width: 80%;
+  height: 1px;
+  background-color: #333; 
+  margin: 15px auto;
+}
+
+.music-player {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 80%;
+  background-color: transparent; 
+  border: 1px solid #333; 
+  border-radius: 10px; 
+}
+
+.lyrics-display {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px; 
+  height: 200%; 
+  background: url('miku.png') no-repeat center center; 
+  background-size: cover;
+  opacity: 0.5; 
+  z-index: -1; 
+}
+
+
+@media screen and (max-width: 768px) {
+  .music-box {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .music-box {
+    width: 95%; 
+  }
+}
